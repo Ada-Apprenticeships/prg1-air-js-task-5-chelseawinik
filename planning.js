@@ -42,7 +42,9 @@ function calculateProfit(flight, airports, aeroplanes) {
         console.error(`Aircraft not found: ${aircraftType}`);
         return null;
     }
-    const costPerSeatPer100km = parseFloat(aircraft[1]);
+
+    // Remove the £ symbol and parse the cost per seat per 100km
+    const costPerSeatPer100km = parseFloat(aircraft[1].replace('£', ''));
     const totalSeats = parseInt(aircraft[3]);
     console.log(`Cost per seat per 100km: £${costPerSeatPer100km}, Total seats: ${totalSeats}`);
 
