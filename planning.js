@@ -10,7 +10,7 @@ function readCsv(filename, delimiter = ',') {
         // Split the file content into rows based on newline characters
         const rows = fileContent.split('\n');
         
-        // Initialize an empty array to store the parsed data
+        // Initialise an empty array to store the parsed data
         const data = [];
 
         // Loop through each row, starting from the second row (index 1) to skip the header
